@@ -1,0 +1,61 @@
+@import "../../assets/styles/colors.scss";
+
+.food-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-bottom: 3px solid $borderColor;
+  width: calc(100vw - 530px);
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+
+  &__item {
+    margin-right: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition-duration: 300ms;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  .active__item {
+    color: $primaryColor;
+  }
+
+  &__active-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    border-bottom: 3px solid $primaryColor;
+    transition-duration: 500ms;
+    box-shadow: 0px -8px 24px rgba(234, 124, 105, 0.32);
+
+    &--move {
+      animation-name: move;
+      animation-duration: 500ms;
+    }
+  }
+}
+
+@keyframes move {
+  from {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.5);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

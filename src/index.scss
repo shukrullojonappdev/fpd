@@ -1,0 +1,17 @@
+@import "./assets/styles/colors.scss";
+@import "./assets/styles/fonts.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  background: $backgroundColor;
+  font-family: $BarlowFont;
+  color: $mainTextColor;
+}
