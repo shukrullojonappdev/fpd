@@ -12,6 +12,7 @@ import Message from "./pages/message/Message";
 import Notification from "./pages/notification/Notification";
 import Setting from "./pages/setting/Setting";
 import LogOut from "./pages/log-out/LogOut";
+import Dishes from "./components/dishes/Dishes";
 
 export default function App() {
   return (
@@ -19,7 +20,9 @@ export default function App() {
       <div className="app">
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="home" element={<Home />}>
+            <Route path=":strCategory" element={<Dishes />} />
+          </Route>
           <Route path="discount" element={<Discount />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="message" element={<Message />} />

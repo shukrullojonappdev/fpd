@@ -2,14 +2,27 @@
 
 .dishes {
   margin-top: 30px;
+  margin-bottom: 15px;
 
   &__row {
     display: flex;
     justify-content: space-between;
+    height: 40px;
+    align-items: center;
     margin-bottom: 30px;
 
     &-text {
       font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    height: calc(100vh - 235px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
     }
   }
 }

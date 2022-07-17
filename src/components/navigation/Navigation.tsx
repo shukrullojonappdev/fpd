@@ -55,7 +55,7 @@ export default function Navigation() {
           </div>
           <div className="navigation__row">
             <div className="navigation__item">
-              <Link to="/">
+              <Link to="home">
                 <div
                   className="navigation__box fi active"
                   onClick={getTargetNavItem}
