@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
-import Dishes from "../dishes/Dishes";
 import "./FoodNav.scss";
 
 function FoodNavItem(prop: { title: string; onClick: any; className: any }) {
@@ -45,7 +44,7 @@ export default function FoodNav() {
     <>
       <div className="food-nav">
         {data?.categories.map((item, index) => (
-          <Link to={data.categories[index].strCategory}>
+          <Link to={data.categories[index].strCategory} className="link">
             <FoodNavItem
               key={index}
               className={index === 0 ? "active__item" : ""}
@@ -75,7 +74,6 @@ export default function FoodNav() {
         ))}
         <div className="food-nav__active-line" style={{ left: position }}></div>
       </div>
-      <Dishes />
     </>
   );
 }

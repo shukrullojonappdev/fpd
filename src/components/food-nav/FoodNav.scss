@@ -16,8 +16,11 @@
     height: 1px;
   }
 
-  &__item {
+  .link {
     margin-right: 50px;
+  }
+
+  &__item {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
