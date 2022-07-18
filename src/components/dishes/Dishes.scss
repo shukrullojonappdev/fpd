@@ -17,12 +17,17 @@
   }
 
   &__list {
-    width: 100%;
+    width: calc(100vw - 530px);
     height: calc(100vh - 235px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
       width: 0;
+      height: 0;
     }
   }
 }

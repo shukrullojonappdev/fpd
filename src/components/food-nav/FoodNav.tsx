@@ -47,7 +47,7 @@ export default function FoodNav() {
           <Link to={data.categories[index].strCategory} className="link">
             <FoodNavItem
               key={index}
-              className={index === 0 ? "active__item" : ""}
+              className={""}
               title={item.strCategory}
               onClick={(e: any) => {
                 const pos = e.target.getBoundingClientRect().left;
